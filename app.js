@@ -8,8 +8,6 @@ import pages from "./data.js";
 dotenv.config();
 
 const main = async () => {
-  console.log(process.env);
-  return;
   for (const page of pages) {
     console.log(`Fetching ${page.title}`);
 
