@@ -1,0 +1,17 @@
+[Unit]
+Description=Kravler
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/kravler.js/
+ExecStart=node app.js
+Restart=always
+RestartSec=900
+
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=kravler
+
+[Install]
+WantedBy=multi-user.target
